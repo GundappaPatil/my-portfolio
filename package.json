@@ -16,6 +16,7 @@
     "@fortawesome/vue-fontawesome": "^3.0.8",
     "@mdi/font": "7.4.47",
     "core-js": "^3.37.1",
+    "firebase": "^10.14.0",
     "roboto-fontface": "*",
     "vue": "^3.4.34",
     "vuetify": "^3.6.11"
