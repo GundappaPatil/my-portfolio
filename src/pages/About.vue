@@ -45,7 +45,9 @@
               experienced in collaborating with cross-functional teams to ensure
               the best possible user experiences.
             </p>
-            <VBtn title dark color="yellow" class="mt-4">Download Resume </VBtn>
+            <VBtn title dark color="yellow" class="mt-4" @click="downloadResume"
+              >Download Resume
+            </VBtn>
           </VCol>
         </VRow>
       </div>
@@ -65,8 +67,16 @@
 
 <script setup>
 import aboutMe from "../assets/aboutMe.png";
+import resume from "../assets/Resume (1) (1).pdf";
 
 const slider2 = 50;
+
+const downloadResume = () => {
+  const link = document.createElement("a");
+  link.href = resume; // Path to your PDF file
+  link.download = "Gundappa_Patil_Resume.pdf"; // Set the download file name
+  link.click();
+};
 </script>
 
 <style lang="scss" scoped>
