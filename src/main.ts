@@ -5,16 +5,20 @@
  */
 
 // Plugins
-import { registerPlugins } from '@/plugins'
+import { registerPlugins } from "@/plugins";
+import Vue3Toastify from "vue3-toastify";
+import "vue3-toastify/dist/index.css";
 
 // Components
-import App from './App.vue'
+import App from "./App.vue";
 
 // Composables
-import { createApp } from 'vue'
+import { createApp } from "vue";
 
-const app = createApp(App)
+const app = createApp(App);
 
-registerPlugins(app)
+app.use(Vue3Toastify);
 
-app.mount('#app')
+registerPlugins(app);
+
+app.mount("#app");

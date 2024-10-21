@@ -1,3 +1,19 @@
+<script lang="ts" setup>
+import NavBar from "@/components/NavBar.vue";
+import Home from "./Home.vue";
+import gunduImage from "../assets/Myself.jpg";
+import About from "./About.vue";
+import Contact from "./Contact.vue";
+// import Blog from "./Blog.vue";
+import Project from "./Project.vue";
+import Skills from "./Skills.vue";
+
+const scroll = (refName: string) => {
+  const element = document.getElementById(refName);
+  element?.scrollIntoView({ behavior: "smooth" });
+};
+</script>
+
 <template>
   <VApp id="home">
     <NavBar />
@@ -21,12 +37,17 @@
               <VIcon size="50" icon="mdi-chevron-double-down" />
             </div>
           </VCol>
-          <VCol cols="5">
-            <div style="position: relative; z-index: 9999" class="Header mt-16">
+          <VCol cols="12" md="5">
+            <div class="Header mt-16 text-center">
               <h1 class="text-grey">Hello,</h1>
               <h1 class="text-white">I'M Gundu Patil</h1>
               <span class="text-grey">Frontend Developer</span><br />
-              <VBtn title dark class="text-yellow mt-8" variant="outlined"
+              <VBtn
+                title
+                dark
+                class="text-yellow mt-8"
+                variant="outlined"
+                @click="scroll('contact')"
                 >Contact me</VBtn
               >
             </div>
@@ -36,25 +57,13 @@
 
       <div>
         <About />
-        <Portfolio />
-        <!-- <Blog /> -->
-        <Services />
+        <Project />
+        <Skills />
         <Contact />
       </div>
     </VContainer>
   </VApp>
 </template>
-
-<script lang="ts" setup>
-import NavBar from "@/components/NavBar.vue";
-import Home from "./Home.vue";
-import gunduImage from "../assets/Myself.jpg";
-import About from "./About.vue";
-import Contact from "./Contact.vue";
-// import Blog from "./Blog.vue";
-import Portfolio from "./Portfolio.vue";
-import Services from "./Services.vue";
-</script>
 
 <style scoped>
 .VContainer {
@@ -74,6 +83,7 @@ import Services from "./Services.vue";
   position: relative;
   animation: mymove 3s 1;
   animation-delay: 0.5s;
+  z-index: 9999;
 }
 @keyframes mymove {
   from {
@@ -133,7 +143,6 @@ import Services from "./Services.vue";
 @media only screen and (max-width: 800px) {
   .head {
     height: 1000px;
-  
   }
 }
 </style>
