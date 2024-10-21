@@ -9,7 +9,7 @@
             </div>
           </VCol>
           <VCol cols="12" sm="6">
-            <h5 class="mt-16">About Me</h5>
+            <h1 class="mt-16">Who I Am ?</h1>
             <div style="width: 120px">
               <VSlider
                 v-model="slider2"
@@ -18,8 +18,7 @@
               >
               </VSlider>
             </div>
-            <h4 class="mt-n4">I Am a Creative Web Designer</h4>
-            <h4>And Developer</h4>
+            <h4 class="mt-n4">I Am a Creative Web Developer</h4>
             <p class="text-grey">
               Hello! I'm Gundappa Patil, a frontend developer with 4 years of
               experience in building interactive and responsive web
@@ -52,7 +51,7 @@
         </VRow>
       </div>
     </VCol>
-    <div class="text-center mt-4">
+    <!-- <div class="text-center mt-4">
       <h2>What we Do</h2>
       <div style="width: 120px; margin: 0 auto">
         <VSlider
@@ -61,7 +60,7 @@
           tick-label="track-color"
         ></VSlider>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 

@@ -8,10 +8,8 @@ const scroll = (refName: string) => {
 const menuItems = [
   { name: "Home", ref: "home", class: "text-yellow" },
   { name: "About", ref: "about" },
-  { name: "Portfolio", ref: "portfolio" },
-  { name: "Services", ref: "services" },
-  { name: "Page", ref: "page" },
-  { name: "Blog", ref: "blog" },
+  { name: "Projects", ref: "project" },
+  { name: "Skills", ref: "skills" },
   { name: "Contact", ref: "contact" },
 ];
 </script>
